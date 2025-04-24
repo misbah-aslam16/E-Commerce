@@ -14,7 +14,10 @@ connectCloudinary();
 
 // INFO: Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://e-commerce-git-master-misbahs-projects-32ff5f2c.vercel.app"
+}));
+
 
 // INFO: API endpoints
 app.use("/api/user", userRouter);
